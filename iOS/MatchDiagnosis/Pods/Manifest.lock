@@ -1,18 +1,21 @@
 PODS:
+  - LTMorphingLabel (0.0.8)
   - Realm (0.96.2):
     - Realm/Headers (= 0.96.2)
   - Realm/Headers (0.96.2)
   - RealmSwift (0.96.2):
     - Realm (= 0.96.2)
-  - SwiftyJSON (2.3.1)
+  - SCLAlertView (0.4.3)
 
 DEPENDENCIES:
+  - LTMorphingLabel (~> 0.0.8)
   - RealmSwift
-  - SwiftyJSON
+  - SCLAlertView
 
 SPEC CHECKSUMS:
+  LTMorphingLabel: 0d2c981d47bb3b57dd03b37c5c13d8d71fc1e97e
   Realm: 3ce8448151c571e90b85002d984d7f93f54fc8a3
   RealmSwift: 485599fe54e35461c4a0daa7d01d8fbf11424873
-  SwiftyJSON: 592b53bee5ef3dd9b3bebc6b9cb7ee35426ae8c3
+  SCLAlertView: a5c726a80a938fd3127edd7dbc19da33fb936ca3
 
 COCOAPODS: 0.38.2

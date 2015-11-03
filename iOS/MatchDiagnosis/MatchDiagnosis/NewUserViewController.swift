@@ -39,12 +39,16 @@ class NewUserViewController: UIViewController , UITextFieldDelegate {
             inputField.text = userName!
             rightbuttonTitle = "Change"
             settingStatus = Status.Add
+            self.title = "ユーザ設定"
         } else {
             deleteButton.hidden = true
+            self.title = "新規登録"
         }
         
         inputField.returnKeyType = UIReturnKeyType.Done
         inputField.delegate = self
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector:"textFieldDidChange:", name: UITextFieldTextDidChangeNotification, object: nil)
         
         setHeaderButton()
     }

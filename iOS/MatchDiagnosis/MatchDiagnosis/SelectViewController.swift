@@ -8,12 +8,14 @@
 
 import UIKit
 import RealmSwift
+import SCLAlertView
 
 
 class SelectViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var userName: UILabel!
+    @IBOutlet weak var roundIcon: RoundLabel!
+    @IBOutlet weak var userName: SexLabel!
     
     var masterUserNames: Results<User>!
     var selectUserNames: Results<User>!
@@ -33,13 +35,25 @@ class SelectViewController: UIViewController,UITableViewDelegate,UITableViewData
            selectUserSex = 1
         }
 
+        let titleImage = UIImageView.init(image: UIImage.init(named: "HeaderIcon"))
+        self.navigationItem.titleView = titleImage
+        
+        roundIcon.setTextColor(Sex(rawValue: plyer!.sex)!)
+        roundIcon.text = plyer!.name.substringToIndex(plyer!.name.startIndex.advancedBy(1))
+        
         //回答用のユーザたち
         selectUserNames = masterUserNames?.filter("sex = \(selectUserSex)")
-        userName.text = plyer?.name
+        let userDispStr = "\(plyer!.name)の番です。"
+        userName.text = userDispStr
+        
+        userName.setTextColor(Sex(rawValue: plyer!.sex)!)
         
         let nib  = UINib(nibName: identifier, bundle:nil)
         tableView.registerNib(nib, forCellReuseIdentifier:identifier)
         tableView.separatorColor = UIColor.clearColor()
+        
+        //Naviagationbar潜り込み防止
+        self.edgesForExtendedLayout = UIRectEdge.None
         
         self.navigationItem.setHidesBackButton(true, animated: false)
     }
@@ -51,8 +65,10 @@ class SelectViewController: UIViewController,UITableViewDelegate,UITableViewData
         if cell == nil {
             cell = UserTableViewCell(style: UITableViewCellStyle.Value1, reuseIdentifier: identifier)
         }
-        
-        cell!.userName!.text = selectUserNames[indexPath.row].name
+        let user = selectUserNames[indexPath.row]
+        cell!.userName!.text = user.name
+        cell!.userName.setTextColor(Sex(rawValue: user.sex)!)
+
         cell!.setHiddenCheckBox()
         return cell!
     }
@@ -74,17 +90,14 @@ class SelectViewController: UIViewController,UITableViewDelegate,UITableViewData
     
     func setAlertView (likePeople :String , like_id :Int) {
         
-        let title = "\(userName.text!)さんでよろしいですか？"
-        let message = "\(likePeople)が好きなのですね？"
+        let message = "本当に\(likePeople)でよろしいですか？"
         
-        let alertController = UIAlertController(title: title, message: message, preferredStyle: .Alert)
-        
-        let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: {
-            (action:UIAlertAction!) -> Void in
-            
+        let alertView = SCLAlertView()
+        alertView.showCloseButton = false
+        alertView.addButton("はい") {
             let manager = EventManager()
             manager.event_id = self.event_id
-
+            
             if self.currentUserId + 1 == self.masterUserNames!.count {
                 manager.add((self.plyer?.id)!, like_id: like_id, complition: { (error) -> Void in
                     let pc = ResultViewController(nibName: "ResultViewController", bundle: nil)
@@ -100,22 +113,11 @@ class SelectViewController: UIViewController,UITableViewDelegate,UITableViewData
                     self.navigationController?.pushViewController(pc, animated: true)
                 })
             }
-            
-        })
-        
-        let cancelAction = UIAlertAction(title: "Cancel",
-            style: UIAlertActionStyle.Cancel,
-            handler:{
-                (action:UIAlertAction!) -> Void in
-                
-        })
-
-        
-        alertController.addAction(defaultAction)
-        alertController.addAction(cancelAction)
-        
-        presentViewController(alertController, animated: true, completion: nil)
+        }
+        alertView
+        alertView.addButton("いいえ") { () -> Void in
+            print("いいえ")
+        }
+        alertView.showNotice("確認", subTitle: message)
     }
-
-
 }

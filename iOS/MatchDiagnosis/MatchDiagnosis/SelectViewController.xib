@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SelectViewController" customModule="MatchDiagnosis" customModuleProvider="target">
             <connections>
+                <outlet property="roundIcon" destination="2gF-iM-7wK" id="A02-VG-mct"/>
                 <outlet property="tableView" destination="svg-91-EVU" id="7Ix-JF-rYe"/>
                 <outlet property="userName" destination="cGW-sA-2bX" id="C91-bh-Xjz"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -19,37 +20,43 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yg5-FU-LBQ">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="200"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="vDY-Xo-5CF">
-                            <rect key="frame" x="279" y="20" width="42" height="42"/>
-                        </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="TATSUYA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cGW-sA-2bX">
-                            <rect key="frame" x="264" y="72" width="72.5" height="21"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="21" id="Zgc-Vt-7Du"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="好きな人を一人選んでください" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tv3-M2-Ncf">
-                            <rect key="frame" x="181" y="133" width="238" height="21"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="好きな人を一人選んでください" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tv3-M2-Ncf">
+                            <rect key="frame" x="181" y="156" width="238" height="21"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="21" id="2Sp-uu-jkV"/>
                                 <constraint firstAttribute="width" constant="238" id="lx0-w0-lVY"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textColor" red="0.70588235294117652" green="0.72156862745098038" blue="0.73725490196078436" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="T" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2gF-iM-7wK" customClass="RoundLabel" customModule="MatchDiagnosis" customModuleProvider="target">
+                            <rect key="frame" x="250" y="20" width="100" height="100"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="100" id="Yp2-q1-mMD"/>
+                                <constraint firstAttribute="height" constant="100" id="l9c-k4-JM8"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="55"/>
+                            <color key="textColor" red="0.95686274509803926" green="0.55294117647058827" blue="0.59215686274509804" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TATSUYA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cGW-sA-2bX" customClass="SexLabel" customModule="MatchDiagnosis" customModuleProvider="target">
+                            <rect key="frame" x="261.5" y="125" width="77.5" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="Zgc-Vt-7Du"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <color key="textColor" red="0.70588235294117652" green="0.72156862745098038" blue="0.73725490196078436" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" red="0.050980396568775177" green="0.054901964962482452" blue="0.14901961386203766" alpha="0.22" colorSpace="deviceRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="200" id="18i-fH-i7s"/>
-                        <constraint firstItem="vDY-Xo-5CF" firstAttribute="top" secondItem="Yg5-FU-LBQ" secondAttribute="top" constant="20" id="CiF-OC-GfQ"/>
-                        <constraint firstItem="cGW-sA-2bX" firstAttribute="top" secondItem="vDY-Xo-5CF" secondAttribute="bottom" constant="10" id="MZz-t0-gyT"/>
-                        <constraint firstItem="vDY-Xo-5CF" firstAttribute="centerX" secondItem="Yg5-FU-LBQ" secondAttribute="centerX" id="bWR-2y-Y4a"/>
+                        <constraint firstItem="cGW-sA-2bX" firstAttribute="top" secondItem="2gF-iM-7wK" secondAttribute="bottom" constant="5" id="2qW-g2-8Gn"/>
+                        <constraint firstItem="2gF-iM-7wK" firstAttribute="centerX" secondItem="Yg5-FU-LBQ" secondAttribute="centerX" id="6Qd-HC-3G1"/>
+                        <constraint firstItem="2gF-iM-7wK" firstAttribute="top" secondItem="Yg5-FU-LBQ" secondAttribute="top" constant="20" id="8s2-UT-6I3"/>
                         <constraint firstItem="Tv3-M2-Ncf" firstAttribute="centerX" secondItem="Yg5-FU-LBQ" secondAttribute="centerX" id="frw-Ty-i4i"/>
-                        <constraint firstItem="Tv3-M2-Ncf" firstAttribute="top" secondItem="cGW-sA-2bX" secondAttribute="bottom" constant="40" id="ign-bV-AJ4"/>
+                        <constraint firstItem="Tv3-M2-Ncf" firstAttribute="top" secondItem="cGW-sA-2bX" secondAttribute="bottom" constant="10" id="ign-bV-AJ4"/>
                         <constraint firstItem="cGW-sA-2bX" firstAttribute="centerX" secondItem="Yg5-FU-LBQ" secondAttribute="centerX" id="pOL-nG-osa"/>
                     </constraints>
                 </view>
@@ -74,7 +81,4 @@
             </constraints>
         </view>
     </objects>
-    <resources>
-        <image name="user" width="42" height="42"/>
-    </resources>
 </document>

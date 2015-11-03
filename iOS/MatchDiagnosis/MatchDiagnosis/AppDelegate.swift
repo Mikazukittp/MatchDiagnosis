@@ -19,13 +19,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if let win = window {
             win.opaque = true
             
-            let vc: UIViewController = SettingViewController(nibName: "SettingViewController", bundle:nil)
+            let vc: UIViewController = TopViewController(nibName: "TopViewController", bundle:nil)
             let nc = UINavigationController(rootViewController: vc)
 
             win.rootViewController = nc
             win.makeKeyAndVisible()
             
-            UINavigationBar.appearance().barTintColor = UIColor(red: 0.251, green: 0.773, blue: 1.000, alpha: 1.0)
+            UINavigationBar.appearance().barTintColor = UIColor(red: 0.443, green: 0.769, blue: 0.784, alpha: 1.0)
             UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
             UINavigationBar.appearance().tintColor = UIColor.whiteColor()
             

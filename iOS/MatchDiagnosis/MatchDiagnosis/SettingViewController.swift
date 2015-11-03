@@ -29,6 +29,10 @@ class SettingViewController: UIViewController,UITableViewDelegate,UITableViewDat
         
         self.tableView.separatorColor = UIColor.clearColor()
         
+        
+        let titleImage = UIImageView.init(image: UIImage.init(named: "HeaderIcon"))
+        self.navigationItem.titleView = titleImage
+        
         setHeaderButton()
         
     }
@@ -62,8 +66,11 @@ class SettingViewController: UIViewController,UITableViewDelegate,UITableViewDat
             cell = UserTableViewCell(style: UITableViewCellStyle.Value1, reuseIdentifier: identifier)
         }
         let usersInSection = userNames?.filter("sex = \(indexPath.section)")
-        cell!.userName!.text = usersInSection?[indexPath.row].name
+        let user = usersInSection?[indexPath.row]
+        cell!.userName!.text = user!.name
+        cell!.userName.setTextColor(Sex(rawValue: user!.sex)!)
         cell!.resetCheckBox()
+        
         cell?.delegate = self
         
         return cell!

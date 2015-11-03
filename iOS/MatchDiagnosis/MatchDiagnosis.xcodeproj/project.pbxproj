@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1786B79F41F725F254CE006A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEED16E84DEFADEAB056BC9B /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		830862C31BE8802500EF15F3 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830862C11BE8802500EF15F3 /* TopViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		830862C41BE8802500EF15F3 /* TopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 830862C21BE8802500EF15F3 /* TopViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		830862C61BE886C800EF15F3 /* SexLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830862C51BE886C800EF15F3 /* SexLabel.swift */; settings = {ASSET_TAGS = (); }; };
 		836C9DCE1BE380CC001EAAA9 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836C9DCD1BE380CC001EAAA9 /* RoundButton.swift */; settings = {ASSET_TAGS = (); }; };
 		836C9DD11BE38380001EAAA9 /* NewUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836C9DCF1BE38380001EAAA9 /* NewUserViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		836C9DD21BE38380001EAAA9 /* NewUserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 836C9DD01BE38380001EAAA9 /* NewUserViewController.xib */; settings = {ASSET_TAGS = (); }; };
@@ -17,7 +20,6 @@
 		838892FF1BE59560005EB02A /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838892FE1BE59560005EB02A /* UserManager.swift */; settings = {ASSET_TAGS = (); }; };
 		839EF6981BE2775300F9D7CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839EF6971BE2775300F9D7CD /* AppDelegate.swift */; };
 		839EF69F1BE2775300F9D7CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 839EF69E1BE2775300F9D7CD /* Assets.xcassets */; };
-		839EF6A21BE2775300F9D7CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 839EF6A01BE2775300F9D7CD /* LaunchScreen.storyboard */; };
 		839EF6AB1BE277B200F9D7CD /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839EF6A91BE277B200F9D7CD /* SettingViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		839EF6AC1BE277B200F9D7CD /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 839EF6AA1BE277B200F9D7CD /* SettingViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		839EF6AF1BE2785A00F9D7CD /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839EF6AD1BE2785A00F9D7CD /* UserTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
@@ -33,6 +35,9 @@
 
 /* Begin PBXFileReference section */
 		7990A1D165DD25E04A95C072 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		830862C11BE8802500EF15F3 /* TopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
+		830862C21BE8802500EF15F3 /* TopViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TopViewController.xib; sourceTree = "<group>"; };
+		830862C51BE886C800EF15F3 /* SexLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SexLabel.swift; sourceTree = "<group>"; };
 		836C9DCD1BE380CC001EAAA9 /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		836C9DCF1BE38380001EAAA9 /* NewUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewUserViewController.swift; sourceTree = "<group>"; };
 		836C9DD01BE38380001EAAA9 /* NewUserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewUserViewController.xib; sourceTree = "<group>"; };
@@ -43,7 +48,6 @@
 		839EF6941BE2775300F9D7CD /* MatchDiagnosis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MatchDiagnosis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		839EF6971BE2775300F9D7CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		839EF69E1BE2775300F9D7CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		839EF6A11BE2775300F9D7CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		839EF6A31BE2775300F9D7CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		839EF6A91BE277B200F9D7CD /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		839EF6AA1BE277B200F9D7CD /* SettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
@@ -89,6 +93,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		830862C01BE87FEE00EF15F3 /* TOP */ = {
+			isa = PBXGroup;
+			children = (
+				830862C11BE8802500EF15F3 /* TopViewController.swift */,
+				830862C21BE8802500EF15F3 /* TopViewController.xib */,
+			);
+			name = TOP;
+			sourceTree = "<group>";
+		};
 		838892FA1BE59471005EB02A /* Entity */ = {
 			isa = PBXGroup;
 			children = (
@@ -130,12 +143,12 @@
 			isa = PBXGroup;
 			children = (
 				839EF6971BE2775300F9D7CD /* AppDelegate.swift */,
+				830862C01BE87FEE00EF15F3 /* TOP */,
 				838892FD1BE59509005EB02A /* Manager */,
 				839EF6B71BE285F100F9D7CD /* Result */,
 				839EF6B21BE27F4F00F9D7CD /* Select */,
 				839EF6B11BE27F3E00F9D7CD /* Setting */,
 				839EF69E1BE2775300F9D7CD /* Assets.xcassets */,
-				839EF6A01BE2775300F9D7CD /* LaunchScreen.storyboard */,
 				839EF6A31BE2775300F9D7CD /* Info.plist */,
 			);
 			path = MatchDiagnosis;
@@ -156,6 +169,7 @@
 		839EF6B21BE27F4F00F9D7CD /* Select */ = {
 			isa = PBXGroup;
 			children = (
+				83B0C41F1BE86C7A00D820C6 /* RoundLabel.swift */,
 				839EF6B31BE27F6E00F9D7CD /* SelectViewController.swift */,
 				839EF6B41BE27F6E00F9D7CD /* SelectViewController.xib */,
 			);
@@ -167,7 +181,7 @@
 			children = (
 				839EF6B81BE2860000F9D7CD /* ResultViewController.swift */,
 				839EF6B91BE2860000F9D7CD /* ResultViewController.xib */,
-				83B0C41F1BE86C7A00D820C6 /* RoundLabel.swift */,
+				830862C51BE886C800EF15F3 /* SexLabel.swift */,
 			);
 			name = Result;
 			sourceTree = "<group>";
@@ -218,6 +232,7 @@
 				TargetAttributes = {
 					839EF6931BE2775300F9D7CD = {
 						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = YWN725QK7F;
 					};
 				};
 			};
@@ -249,7 +264,7 @@
 				839EF6BB1BE2860000F9D7CD /* ResultViewController.xib in Resources */,
 				839EF6B01BE2785A00F9D7CD /* UserTableViewCell.xib in Resources */,
 				836C9DD61BE38761001EAAA9 /* AddUserTableViewCell.xib in Resources */,
-				839EF6A21BE2775300F9D7CD /* LaunchScreen.storyboard in Resources */,
+				830862C41BE8802500EF15F3 /* TopViewController.xib in Resources */,
 				839EF6AC1BE277B200F9D7CD /* SettingViewController.xib in Resources */,
 				839EF69F1BE2775300F9D7CD /* Assets.xcassets in Resources */,
 			);
@@ -313,9 +328,11 @@
 				836C9DD51BE38761001EAAA9 /* AddUserTableViewCell.swift in Sources */,
 				83B0C41C1BE8601C00D820C6 /* Event.swift in Sources */,
 				836C9DCE1BE380CC001EAAA9 /* RoundButton.swift in Sources */,
+				830862C61BE886C800EF15F3 /* SexLabel.swift in Sources */,
 				83B0C4201BE86C7A00D820C6 /* RoundLabel.swift in Sources */,
 				839EF6BA1BE2860000F9D7CD /* ResultViewController.swift in Sources */,
 				839EF6B51BE27F6E00F9D7CD /* SelectViewController.swift in Sources */,
+				830862C31BE8802500EF15F3 /* TopViewController.swift in Sources */,
 				839EF6981BE2775300F9D7CD /* AppDelegate.swift in Sources */,
 				83B0C41E1BE8607700D820C6 /* EventManager.swift in Sources */,
 				838892FC1BE59482005EB02A /* User.swift in Sources */,
@@ -327,17 +344,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		839EF6A01BE2775300F9D7CD /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				839EF6A11BE2775300F9D7CD /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		839EF6A41BE2775300F9D7CD /* Debug */ = {
@@ -426,10 +432,13 @@
 			baseConfigurationReference = A4C2CA09FFF576971F343589 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = MatchDiagnosis/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.co.tatsuya.MatchDiagnosis;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "フィーリングマッチ";
 			};
 			name = Debug;
 		};
@@ -438,10 +447,13 @@
 			baseConfigurationReference = 7990A1D165DD25E04A95C072 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = MatchDiagnosis/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.co.tatsuya.MatchDiagnosis;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "フィーリングマッチ";
 			};
 			name = Release;
 		};

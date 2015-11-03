@@ -15,7 +15,7 @@ protocol UserTableViewCellDelegate{
 class UserTableViewCell: UITableViewCell {
 
     @IBOutlet weak var checkBox: UIButton!
-    @IBOutlet weak var userName: UILabel!
+    @IBOutlet weak var userName: SexLabel!
     
     var isChecked = false
     var delegate: UserTableViewCellDelegate! = nil

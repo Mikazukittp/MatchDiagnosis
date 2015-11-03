@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ResultViewController" customModule="MatchDiagnosis" customModuleProvider="target">
             <connections>
+                <outlet property="coupleLabel" destination="MgL-NK-EYR" id="l5A-gB-h8N"/>
                 <outlet property="coupleNumLabel" destination="4Vc-3j-QHh" id="goC-ji-kPe"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -15,40 +16,47 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="祝" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xJi-rC-kP4">
-                    <rect key="frame" x="281" y="50" width="37" height="44.5"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="37"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vQb-E7-tOL">
-                    <rect key="frame" x="250" y="445.5" width="100" height="30"/>
-                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <rect key="frame" x="145" y="446" width="310" height="60"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="100" id="h34-2P-sJ5"/>
+                        <constraint firstAttribute="height" constant="60" id="8ea-G5-MAT"/>
+                        <constraint firstAttribute="width" constant="310" id="h34-2P-sJ5"/>
                     </constraints>
-                    <state key="normal" title="TOP">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                    <state key="normal" title="TOP" backgroundImage="GrayButton">
+                        <color key="titleColor" red="0.70588235294117652" green="0.72156862745098038" blue="0.73725490196078436" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>
                         <action selector="topButtonTapped:" destination="-1" eventType="touchUpInside" id="z2N-sH-Xb7"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Vc-3j-QHh" customClass="RoundLabel" customModule="MatchDiagnosis" customModuleProvider="target">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Vc-3j-QHh" customClass="RoundLabel" customModule="MatchDiagnosis" customModuleProvider="target">
                     <rect key="frame" x="200" y="200" width="200" height="200"/>
-                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="200" id="9XP-Ae-qa9"/>
                         <constraint firstAttribute="height" constant="200" id="PAI-yg-TLS"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="100"/>
-                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="textColor" red="0.94117647058823528" green="0.41176470588235292" blue="0.46274509803921571" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="カップル誕生しました" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MgL-NK-EYR">
-                    <rect key="frame" x="215" y="405" width="170" height="20.5"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="組" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MgL-NK-EYR">
+                    <rect key="frame" x="400" y="370" width="30" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="R0z-zo-tvJ"/>
+                        <constraint firstAttribute="height" constant="30" id="tBf-S4-hb9"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                    <color key="textColor" red="0.70588235290000001" green="0.72156862749999995" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今回マッチングしたのは..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xJi-rC-kP4">
+                    <rect key="frame" x="160" y="50" width="280" height="25.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="280" id="FpG-lY-sh2"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                    <color key="textColor" red="0.70588235290000001" green="0.72156862749999995" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
@@ -57,18 +65,27 @@
                 <constraint firstItem="xJi-rC-kP4" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="0Bc-ES-WEn"/>
                 <constraint firstItem="vQb-E7-tOL" firstAttribute="top" secondItem="MgL-NK-EYR" secondAttribute="bottom" constant="20" id="0kn-x2-eHF"/>
                 <constraint firstItem="MgL-NK-EYR" firstAttribute="top" secondItem="4Vc-3j-QHh" secondAttribute="bottom" constant="5" id="3Mh-Kt-GjB"/>
+                <constraint firstItem="MgL-NK-EYR" firstAttribute="top" secondItem="4Vc-3j-QHh" secondAttribute="bottom" constant="-30" id="BTq-8k-u4l"/>
                 <constraint firstItem="vQb-E7-tOL" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="D9l-zp-le5"/>
                 <constraint firstItem="4Vc-3j-QHh" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Dud-aB-WPL"/>
+                <constraint firstItem="MgL-NK-EYR" firstAttribute="leading" secondItem="4Vc-3j-QHh" secondAttribute="trailing" id="efV-QL-OaD"/>
                 <constraint firstItem="MgL-NK-EYR" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="fVe-uL-Baf"/>
                 <constraint firstItem="vQb-E7-tOL" firstAttribute="top" secondItem="4Vc-3j-QHh" secondAttribute="bottom" constant="70" id="hUZ-wA-jO4"/>
                 <constraint firstItem="xJi-rC-kP4" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="50" id="hgK-b2-IYc"/>
                 <constraint firstItem="4Vc-3j-QHh" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="v4a-ba-sKL"/>
+                <constraint firstItem="vQb-E7-tOL" firstAttribute="top" secondItem="4Vc-3j-QHh" secondAttribute="bottom" constant="46" id="zuC-0b-idU"/>
             </constraints>
             <variation key="default">
                 <mask key="constraints">
+                    <exclude reference="0kn-x2-eHF"/>
                     <exclude reference="hUZ-wA-jO4"/>
+                    <exclude reference="3Mh-Kt-GjB"/>
+                    <exclude reference="fVe-uL-Baf"/>
                 </mask>
             </variation>
         </view>
     </objects>
+    <resources>
+        <image name="GrayButton" width="313" height="63"/>
+    </resources>
 </document>
