@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SelectViewController" customModule="MatchDiagnosis" customModuleProvider="target">
+            <connections>
+                <outlet property="tableView" destination="svg-91-EVU" id="7Ix-JF-rYe"/>
+                <outlet property="userName" destination="cGW-sA-2bX" id="C91-bh-Xjz"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yg5-FU-LBQ">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="200"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="vDY-Xo-5CF">
+                            <rect key="frame" x="279" y="20" width="42" height="42"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="TATSUYA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cGW-sA-2bX">
+                            <rect key="frame" x="264" y="72" width="72.5" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="Zgc-Vt-7Du"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="好きな人を一人選んでください" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tv3-M2-Ncf">
+                            <rect key="frame" x="181" y="133" width="238" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="2Sp-uu-jkV"/>
+                                <constraint firstAttribute="width" constant="238" id="lx0-w0-lVY"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.050980396568775177" green="0.054901964962482452" blue="0.14901961386203766" alpha="0.22" colorSpace="deviceRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="18i-fH-i7s"/>
+                        <constraint firstItem="vDY-Xo-5CF" firstAttribute="top" secondItem="Yg5-FU-LBQ" secondAttribute="top" constant="20" id="CiF-OC-GfQ"/>
+                        <constraint firstItem="cGW-sA-2bX" firstAttribute="top" secondItem="vDY-Xo-5CF" secondAttribute="bottom" constant="10" id="MZz-t0-gyT"/>
+                        <constraint firstItem="vDY-Xo-5CF" firstAttribute="centerX" secondItem="Yg5-FU-LBQ" secondAttribute="centerX" id="bWR-2y-Y4a"/>
+                        <constraint firstItem="Tv3-M2-Ncf" firstAttribute="centerX" secondItem="Yg5-FU-LBQ" secondAttribute="centerX" id="frw-Ty-i4i"/>
+                        <constraint firstItem="Tv3-M2-Ncf" firstAttribute="top" secondItem="cGW-sA-2bX" secondAttribute="bottom" constant="40" id="ign-bV-AJ4"/>
+                        <constraint firstItem="cGW-sA-2bX" firstAttribute="centerX" secondItem="Yg5-FU-LBQ" secondAttribute="centerX" id="pOL-nG-osa"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="svg-91-EVU">
+                    <rect key="frame" x="0.0" y="210" width="600" height="390"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="xF8-al-9IZ"/>
+                        <outlet property="delegate" destination="-1" id="dz2-FI-xor"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Yg5-FU-LBQ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="6Nj-ut-wYg"/>
+                <constraint firstItem="svg-91-EVU" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="BYh-xK-cwf"/>
+                <constraint firstItem="svg-91-EVU" firstAttribute="top" secondItem="Yg5-FU-LBQ" secondAttribute="bottom" constant="10" id="G4W-Bo-Trg"/>
+                <constraint firstAttribute="trailing" secondItem="svg-91-EVU" secondAttribute="trailing" id="OxK-Ed-Ey5"/>
+                <constraint firstAttribute="trailing" secondItem="Yg5-FU-LBQ" secondAttribute="trailing" id="PRa-fe-d7k"/>
+                <constraint firstAttribute="bottom" secondItem="svg-91-EVU" secondAttribute="bottom" id="hoO-4B-cWn"/>
+                <constraint firstItem="Yg5-FU-LBQ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="i1R-e0-RSL"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="user" width="42" height="42"/>
+    </resources>
+</document>
