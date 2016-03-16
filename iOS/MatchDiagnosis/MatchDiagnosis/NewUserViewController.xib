@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewUserViewController" customModule="MatchDiagnosis" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewUserViewController" customModule="FeelingMatch" customModuleProvider="target">
             <connections>
                 <outlet property="deleteButton" destination="tLI-jb-Plp" id="GhH-ja-vRm"/>
                 <outlet property="inputField" destination="UhA-Oj-91l" id="4iG-mc-9dJ"/>
@@ -32,14 +32,14 @@
                         <constraint firstAttribute="height" constant="1" id="GGq-PY-7ae"/>
                     </constraints>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tLI-jb-Plp" customClass="RoundButton" customModule="MatchDiagnosis" customModuleProvider="target">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tLI-jb-Plp" customClass="RoundButton" customModule="FeelingMatch" customModuleProvider="target">
                     <rect key="frame" x="260.5" y="87" width="80" height="80"/>
                     <color key="backgroundColor" red="0.94117647059999998" green="0.41176470590000003" blue="0.46274509800000002" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="80" id="gZX-Wr-EtS"/>
                         <constraint firstAttribute="width" constant="80" id="stO-Il-Gtg"/>
                     </constraints>
-                    <state key="normal" title="Delete">
+                    <state key="normal" title="削除">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>

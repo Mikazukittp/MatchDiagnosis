@@ -44,18 +44,17 @@ class UserManager: NSObject {
         return  try! Realm().objects(User)
     }
     
-    func reload (user :User , complition :(error :Bool) ->Void) {
+    func reload (user :User , text :String ,complition :(error :Bool) ->Void) {
         let realm =  try! Realm()
         let myFriend = realm.objects(User).filter("id = \(user.id)")
        
         if myFriend.count > 0 {
 
             let friend = myFriend[0] as User
-            friend.name = user.name
             
             let realm =  try! Realm()
             try! realm.write {
-                realm.add(friend)
+                friend.name = text
                 complition(error: false)
             }
         }else {

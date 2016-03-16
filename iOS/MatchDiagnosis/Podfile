@@ -1,5 +1,4 @@
 pod 'RealmSwift'
 pod 'SCLAlertView'
-pod 'LTMorphingLabel', '~> 0.0.8'
 
 use_frameworks!

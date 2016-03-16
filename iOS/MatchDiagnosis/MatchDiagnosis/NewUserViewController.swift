@@ -25,7 +25,7 @@ class NewUserViewController: UIViewController , UITextFieldDelegate {
     var userSex :Sex = Sex.Man
     var userName :String?
     var user :User?
-    var rightbuttonTitle = "Add"
+    var rightbuttonTitle = "追加"
     var settingStatus = Status.New
     
     let manager = UserManager()
@@ -37,7 +37,7 @@ class NewUserViewController: UIViewController , UITextFieldDelegate {
         
         if (userName?.isEmpty == false) {
             inputField.text = userName!
-            rightbuttonTitle = "Change"
+            rightbuttonTitle = "変更"
             settingStatus = Status.Add
             self.title = "ユーザ設定"
         } else {
@@ -47,6 +47,7 @@ class NewUserViewController: UIViewController , UITextFieldDelegate {
         
         inputField.returnKeyType = UIReturnKeyType.Done
         inputField.delegate = self
+        inputField.becomeFirstResponder()
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector:"textFieldDidChange:", name: UITextFieldTextDidChangeNotification, object: nil)
         
@@ -55,7 +56,7 @@ class NewUserViewController: UIViewController , UITextFieldDelegate {
 
     func setHeaderButton () {
         let backButton :UIButton = UIButton(frame: CGRectMake(0, 0, 60, 20))
-        backButton.setTitle("Cancel", forState: .Normal)
+        backButton.setTitle("閉じる", forState: .Normal)
         backButton.addTarget(self, action: Selector("backButtonTapped"), forControlEvents: .TouchUpInside)
         let bckButtonItem :UIBarButtonItem = UIBarButtonItem(customView: backButton)
         self.navigationItem.leftBarButtonItem = bckButtonItem
@@ -94,8 +95,9 @@ class NewUserViewController: UIViewController , UITextFieldDelegate {
         } else {
             
             //名前の変更
-            user?.name = inputField.text!
-            manager.reload(self.user!, complition: { (error) -> Void in
+
+            let userStr = inputField.text!
+            manager.reload(self.user!, text: userStr, complition: { (error) -> Void in
                 if error == true {
                     self.showAlertView("登録されていないユーザです")
                 } else {

@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "839EF6931BE2775300F9D7CD"
-               BuildableName = "MatchDiagnosis.app"
+               BuildableName = "FeelingMatch.app"
                BlueprintName = "MatchDiagnosis"
                ReferencedContainer = "container:MatchDiagnosis.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "839EF6931BE2775300F9D7CD"
-            BuildableName = "MatchDiagnosis.app"
+            BuildableName = "FeelingMatch.app"
             BlueprintName = "MatchDiagnosis"
             ReferencedContainer = "container:MatchDiagnosis.xcodeproj">
          </BuildableReference>
@@ -56,7 +56,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "839EF6931BE2775300F9D7CD"
-            BuildableName = "MatchDiagnosis.app"
+            BuildableName = "FeelingMatch.app"
             BlueprintName = "MatchDiagnosis"
             ReferencedContainer = "container:MatchDiagnosis.xcodeproj">
          </BuildableReference>
@@ -75,7 +75,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "839EF6931BE2775300F9D7CD"
-            BuildableName = "MatchDiagnosis.app"
+            BuildableName = "FeelingMatch.app"
             BlueprintName = "MatchDiagnosis"
             ReferencedContainer = "container:MatchDiagnosis.xcodeproj">
          </BuildableReference>

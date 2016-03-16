@@ -69,7 +69,7 @@ class SelectViewController: UIViewController,UITableViewDelegate,UITableViewData
         cell!.userName!.text = user.name
         cell!.userName.setTextColor(Sex(rawValue: user.sex)!)
 
-        cell!.setHiddenCheckBox()
+//        cell!.setHiddenCheckBox()
         return cell!
     }
     

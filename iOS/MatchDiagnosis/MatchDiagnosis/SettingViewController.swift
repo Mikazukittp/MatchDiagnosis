@@ -9,17 +9,18 @@
 import UIKit
 import RealmSwift
 
-class SettingViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,UserTableViewCellDelegate {
+class SettingViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
     var lastTouchCellIndex :Int = 0
     
     let identifier: String = "UserTableViewCell"
     var userNames: Results<User>?
-    let sectionTitle = ["Man","Woman"]
+    let sectionTitle = ["男子","女子"]
     let manager = UserManager()
     var checkUser :[[Int]] = [[], []]
 
+    @IBOutlet weak var sugestView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +39,13 @@ class SettingViewController: UIViewController,UITableViewDelegate,UITableViewDat
     }
     override func viewWillAppear(animated: Bool) {
         userNames = manager.allFriends()
+        
+        if (userNames?.count > 0) {
+            sugestView.hidden = true
+        }else {
+            sugestView.hidden = false
+        }
+        
         checkUser = [[],[]]
         
         tableView.reloadData()
@@ -69,9 +77,16 @@ class SettingViewController: UIViewController,UITableViewDelegate,UITableViewDat
         let user = usersInSection?[indexPath.row]
         cell!.userName!.text = user!.name
         cell!.userName.setTextColor(Sex(rawValue: user!.sex)!)
-        cell!.resetCheckBox()
-        
-        cell?.delegate = self
+//        
+//        let checkId = checkUser[indexPath.section][indexPath.row]
+//        
+//        if checkId == user!.id {
+//           cell!.isChecked = true
+//        }else {
+//            cell!.isChecked = false
+//        }
+//        cell?.setImage()
+//        cell?.delegate = self
         
         return cell!
     }
@@ -95,49 +110,49 @@ class SettingViewController: UIViewController,UITableViewDelegate,UITableViewDat
         changeUserInfoController((usersInSection?[indexPath.row])!)
     }
     
-    func checkBoxTapped(cell: UserTableViewCell , isChecked :Bool) {
-        let indexPath = tableView.indexPathForCell(cell)
-        let usersInSection = userNames?.filter("sex = \(indexPath!.section)")
-        
-        
-        if isChecked { //チェックつけた時
-            checkUser[(indexPath?.section)!] += [(usersInSection?[indexPath!.row].id)!]
-        }else { //チェック外した時
-            let id = (usersInSection?[indexPath!.row].id)!
-            var i = 0
-            for check_id :Int in checkUser[(indexPath?.section)!] {
-                if check_id == id {
-                    break
-                }
-                i++
-            }
-            checkUser[(indexPath?.section)!].removeAtIndex(i)
-        }
-    }
+//    func checkBoxTapped(cell: UserTableViewCell , isChecked :Bool) {
+//        let indexPath = tableView.indexPathForCell(cell)
+//        let usersInSection = userNames?.filter("sex = \(indexPath!.section)")
+//        
+//        
+//        if isChecked { //チェックつけた時
+//            checkUser[(indexPath?.section)!] += [(usersInSection?[indexPath!.row].id)!]
+//        }else { //チェック外した時
+//            let id = (usersInSection?[indexPath!.row].id)!
+//            var i = 0
+//            for check_id :Int in checkUser[(indexPath?.section)!] {
+//                if check_id == id {
+//                    break
+//                }
+//                i++
+//            }
+//            checkUser[(indexPath?.section)!].removeAtIndex(i)
+//        }
+//    }
    
     func setHeaderButton () {
-        let backButton :UIButton = UIButton(frame: CGRectMake(0, 0, 60, 20))
-        backButton.setTitle("START", forState: .Normal)
+        let backButton :UIButton = UIButton(frame: CGRectMake(0, 0, 80, 20))
+        backButton.setTitle("スタート", forState: .Normal)
         backButton.addTarget(self, action: Selector("startButtonTapped"), forControlEvents: .TouchUpInside)
         let bckButtonItem :UIBarButtonItem = UIBarButtonItem(customView: backButton)
         self.navigationItem.rightBarButtonItem = bckButtonItem
     }
     
     func startButtonTapped () {
-        let users =  checkUserObjectWithCheckUser()
-        
-        if users?.count > 0 {
-            let manager = EventManager()
-            let event_id = manager.eventNum()
-            
-            let pc = SelectViewController(nibName: "SelectViewController", bundle: nil)
-            pc.masterUserNames = users
-            pc.event_id = event_id
-            self.navigationController?.pushViewController(pc, animated: true)
-        } else {
-            showAlertView("男女一人づつは選択してください。")
-
+        for i in 0...1 {
+            let usersInSection = userNames?.filter("sex = \(i)")
+            if usersInSection!.count == 0 {
+                showAlertView("男女一人づつは選択してください。")
+                return
+            }
         }
+        
+        let manager = EventManager()
+        let event_id = manager.eventNum()
+        let pc = SelectViewController(nibName: "SelectViewController", bundle: nil)
+        pc.masterUserNames = userNames
+        pc.event_id = event_id
+        self.navigationController?.pushViewController(pc, animated: true)
     }
     
     func presentVC (userName :String? ,userSex :Sex?) {
@@ -164,27 +179,26 @@ class SettingViewController: UIViewController,UITableViewDelegate,UITableViewDat
         }
     }
     
-    func checkUserObjectWithCheckUser () -> Results<User>?{
-        
-        var query = "id = "
-        
-        for i in 0...1 {
-            if checkUser[i].count == 0 {
-                print("男女一人づつは選択してください。")
-                return nil
-            }
-            for id :Int in checkUser[i]{
-                query += "\(id) OR id = "
-            }
-            print(query)
-        }
-        print(query.substringToIndex(query.endIndex.advancedBy(-9)))
-        query = query.substringToIndex(query.endIndex.advancedBy(-9))
-        
-        let users = userNames?.filter(query)
-
-        return users!;
-    }
+//    func checkUserObjectWithCheckUser () -> Results<User>?{
+//        
+//        var query = "id = "
+//        
+//        for i in 0...1 {
+//            if checkUser[i].count == 0 {
+//                return nil
+//            }
+//            for id :Int in checkUser[i]{
+//                query += "\(id) OR id = "
+//            }
+//            print(query)
+//        }
+//        print(query.substringToIndex(query.endIndex.advancedBy(-9)))
+//        query = query.substringToIndex(query.endIndex.advancedBy(-9))
+//        
+//        let users = userNames?.filter(query)
+//
+//        return users!;
+//    }
     
     func showAlertView (message :String) {
         let title = "ユーザ登録エラー"

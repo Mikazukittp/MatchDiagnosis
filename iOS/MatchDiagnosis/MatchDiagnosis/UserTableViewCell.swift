@@ -8,9 +8,9 @@
 
 import UIKit
 
-protocol UserTableViewCellDelegate{
-    func checkBoxTapped(cell: UserTableViewCell, isChecked: Bool)
-}
+//protocol UserTableViewCellDelegate{
+//    func checkBoxTapped(cell: UserTableViewCell, isChecked: Bool)
+//}
 
 class UserTableViewCell: UITableViewCell {
 
@@ -18,35 +18,26 @@ class UserTableViewCell: UITableViewCell {
     @IBOutlet weak var userName: SexLabel!
     
     var isChecked = false
-    var delegate: UserTableViewCellDelegate! = nil
+//    var delegate: UserTableViewCellDelegate! = nil
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
     }
     
-    func setHiddenCheckBox () {
-        checkBox.hidden = true
-    }
-    
+//    func setHiddenCheckBox () {
+//        checkBox.hidden = true
+//    }
+//    
     func resetCheckBox () {
         let defaultImage = UIImage(named: "blank_box")!
         isChecked = false
         checkBox.setImage(defaultImage, forState: .Normal)
     }
 
-    @IBAction func checkButtonTapped(sender: AnyObject) {
-        var defaultImage: UIImage
-        
-        if isChecked {
-            defaultImage = UIImage(named: "blank_box")!
-            isChecked = false
-        }else {
-            defaultImage = UIImage(named: "check_box")!
-            isChecked = true
-        }
-        
-        checkBox.setImage(defaultImage, forState: .Normal)
-        delegate.checkBoxTapped(self , isChecked: isChecked)
-    }
+//    @IBAction func checkButtonTapped(sender: AnyObject) {
+//        setImage()
+//        delegate.checkBoxTapped(self , isChecked: isChecked)
+//    }
+    
 }

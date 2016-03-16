@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ResultViewController" customModule="MatchDiagnosis" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ResultViewController" customModule="FeelingMatch" customModuleProvider="target">
             <connections>
                 <outlet property="coupleLabel" destination="MgL-NK-EYR" id="l5A-gB-h8N"/>
                 <outlet property="coupleNumLabel" destination="4Vc-3j-QHh" id="goC-ji-kPe"/>
@@ -17,29 +17,19 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vQb-E7-tOL">
-                    <rect key="frame" x="145" y="446" width="310" height="60"/>
+                    <rect key="frame" x="175" y="446" width="250" height="60"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="60" id="8ea-G5-MAT"/>
-                        <constraint firstAttribute="width" constant="310" id="h34-2P-sJ5"/>
+                        <constraint firstAttribute="width" constant="250" id="h34-2P-sJ5"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                    <state key="normal" title="TOP" backgroundImage="GrayButton">
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                    <state key="normal" title="トップへ" backgroundImage="GrayButton">
                         <color key="titleColor" red="0.70588235294117652" green="0.72156862745098038" blue="0.73725490196078436" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>
                         <action selector="topButtonTapped:" destination="-1" eventType="touchUpInside" id="z2N-sH-Xb7"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Vc-3j-QHh" customClass="RoundLabel" customModule="MatchDiagnosis" customModuleProvider="target">
-                    <rect key="frame" x="200" y="200" width="200" height="200"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="200" id="9XP-Ae-qa9"/>
-                        <constraint firstAttribute="height" constant="200" id="PAI-yg-TLS"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="100"/>
-                    <color key="textColor" red="0.94117647058823528" green="0.41176470588235292" blue="0.46274509803921571" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="組" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MgL-NK-EYR">
                     <rect key="frame" x="400" y="370" width="30" height="30"/>
                     <constraints>
@@ -57,6 +47,16 @@
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="21"/>
                     <color key="textColor" red="0.70588235290000001" green="0.72156862749999995" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Vc-3j-QHh" customClass="RoundLabel" customModule="FeelingMatch" customModuleProvider="target">
+                    <rect key="frame" x="200" y="200" width="200" height="200"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="9XP-Ae-qa9"/>
+                        <constraint firstAttribute="height" constant="200" id="PAI-yg-TLS"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                    <color key="textColor" red="0.94117647058823528" green="0.41176470588235292" blue="0.46274509803921571" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>

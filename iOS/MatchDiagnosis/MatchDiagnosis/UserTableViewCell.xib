@@ -1,30 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="81" id="KGk-i7-Jjw" customClass="UserTableViewCell" customModule="MatchDiagnosis" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="81" id="KGk-i7-Jjw" customClass="UserTableViewCell" customModule="FeelingMatch" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="81"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="80.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qr2-Gb-xg6">
-                        <rect key="frame" x="242" y="5" width="70" height="70"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="70" id="WTS-x6-n2N"/>
-                            <constraint firstAttribute="height" constant="70" id="rsx-wv-qsf"/>
-                        </constraints>
-                        <state key="normal" image="blank_box"/>
-                        <connections>
-                            <action selector="checkButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="t91-if-1QC"/>
-                        </connections>
-                    </button>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Swk-ah-xxe">
                         <rect key="frame" x="9" y="71" width="302" height="1"/>
                         <color key="backgroundColor" red="0.54901960780000003" green="0.54901960780000003" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -32,7 +21,7 @@
                             <constraint firstAttribute="height" constant="1" id="AaS-bz-how"/>
                         </constraints>
                     </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tatsuya" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MmZ-vz-eRq" customClass="SexLabel" customModule="MatchDiagnosis" customModuleProvider="target">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tatsuya" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MmZ-vz-eRq" customClass="SexLabel" customModule="FeelingMatch" customModuleProvider="target">
                         <rect key="frame" x="13" y="27" width="76" height="26.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -43,20 +32,14 @@
                     <constraint firstItem="MmZ-vz-eRq" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="7Xa-Ya-WqC"/>
                     <constraint firstItem="MmZ-vz-eRq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="5" id="7if-HY-NGw"/>
                     <constraint firstAttribute="trailingMargin" secondItem="Swk-ah-xxe" secondAttribute="trailing" constant="1" id="Gde-h1-XvJ"/>
-                    <constraint firstItem="Qr2-Gb-xg6" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Hqj-tK-dVP"/>
                     <constraint firstItem="Swk-ah-xxe" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="1" id="KRD-Nq-fOP"/>
-                    <constraint firstItem="Qr2-Gb-xg6" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="d8k-4c-BO8"/>
                     <constraint firstAttribute="bottomMargin" secondItem="Swk-ah-xxe" secondAttribute="bottom" id="xdZ-Ef-foJ"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="checkBox" destination="Qr2-Gb-xg6" id="WHF-8d-fnS"/>
                 <outlet property="userName" destination="MmZ-vz-eRq" id="rLS-GB-zv7"/>
             </connections>
             <point key="canvasLocation" x="268" y="260.5"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="blank_box" width="170" height="170"/>
-    </resources>
 </document>

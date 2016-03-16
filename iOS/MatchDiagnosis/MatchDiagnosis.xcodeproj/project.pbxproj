@@ -8,29 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		1786B79F41F725F254CE006A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEED16E84DEFADEAB056BC9B /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		830862C31BE8802500EF15F3 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830862C11BE8802500EF15F3 /* TopViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		830862C41BE8802500EF15F3 /* TopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 830862C21BE8802500EF15F3 /* TopViewController.xib */; settings = {ASSET_TAGS = (); }; };
-		830862C61BE886C800EF15F3 /* SexLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830862C51BE886C800EF15F3 /* SexLabel.swift */; settings = {ASSET_TAGS = (); }; };
-		836C9DCE1BE380CC001EAAA9 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836C9DCD1BE380CC001EAAA9 /* RoundButton.swift */; settings = {ASSET_TAGS = (); }; };
-		836C9DD11BE38380001EAAA9 /* NewUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836C9DCF1BE38380001EAAA9 /* NewUserViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		836C9DD21BE38380001EAAA9 /* NewUserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 836C9DD01BE38380001EAAA9 /* NewUserViewController.xib */; settings = {ASSET_TAGS = (); }; };
-		836C9DD51BE38761001EAAA9 /* AddUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836C9DD31BE38761001EAAA9 /* AddUserTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
-		836C9DD61BE38761001EAAA9 /* AddUserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 836C9DD41BE38761001EAAA9 /* AddUserTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
-		838892FC1BE59482005EB02A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838892FB1BE59482005EB02A /* User.swift */; settings = {ASSET_TAGS = (); }; };
-		838892FF1BE59560005EB02A /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838892FE1BE59560005EB02A /* UserManager.swift */; settings = {ASSET_TAGS = (); }; };
+		830862C31BE8802500EF15F3 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830862C11BE8802500EF15F3 /* TopViewController.swift */; };
+		830862C41BE8802500EF15F3 /* TopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 830862C21BE8802500EF15F3 /* TopViewController.xib */; };
+		830862C61BE886C800EF15F3 /* SexLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830862C51BE886C800EF15F3 /* SexLabel.swift */; };
+		836C9DCE1BE380CC001EAAA9 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836C9DCD1BE380CC001EAAA9 /* RoundButton.swift */; };
+		836C9DD11BE38380001EAAA9 /* NewUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836C9DCF1BE38380001EAAA9 /* NewUserViewController.swift */; };
+		836C9DD21BE38380001EAAA9 /* NewUserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 836C9DD01BE38380001EAAA9 /* NewUserViewController.xib */; };
+		836C9DD51BE38761001EAAA9 /* AddUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836C9DD31BE38761001EAAA9 /* AddUserTableViewCell.swift */; };
+		836C9DD61BE38761001EAAA9 /* AddUserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 836C9DD41BE38761001EAAA9 /* AddUserTableViewCell.xib */; };
+		838892FC1BE59482005EB02A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838892FB1BE59482005EB02A /* User.swift */; };
+		838892FF1BE59560005EB02A /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838892FE1BE59560005EB02A /* UserManager.swift */; };
 		839EF6981BE2775300F9D7CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839EF6971BE2775300F9D7CD /* AppDelegate.swift */; };
 		839EF69F1BE2775300F9D7CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 839EF69E1BE2775300F9D7CD /* Assets.xcassets */; };
-		839EF6AB1BE277B200F9D7CD /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839EF6A91BE277B200F9D7CD /* SettingViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		839EF6AC1BE277B200F9D7CD /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 839EF6AA1BE277B200F9D7CD /* SettingViewController.xib */; settings = {ASSET_TAGS = (); }; };
-		839EF6AF1BE2785A00F9D7CD /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839EF6AD1BE2785A00F9D7CD /* UserTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
-		839EF6B01BE2785A00F9D7CD /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 839EF6AE1BE2785A00F9D7CD /* UserTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
-		839EF6B51BE27F6E00F9D7CD /* SelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839EF6B31BE27F6E00F9D7CD /* SelectViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		839EF6B61BE27F6E00F9D7CD /* SelectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 839EF6B41BE27F6E00F9D7CD /* SelectViewController.xib */; settings = {ASSET_TAGS = (); }; };
-		839EF6BA1BE2860000F9D7CD /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839EF6B81BE2860000F9D7CD /* ResultViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		839EF6BB1BE2860000F9D7CD /* ResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 839EF6B91BE2860000F9D7CD /* ResultViewController.xib */; settings = {ASSET_TAGS = (); }; };
-		83B0C41C1BE8601C00D820C6 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B0C41B1BE8601C00D820C6 /* Event.swift */; settings = {ASSET_TAGS = (); }; };
-		83B0C41E1BE8607700D820C6 /* EventManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B0C41D1BE8607700D820C6 /* EventManager.swift */; settings = {ASSET_TAGS = (); }; };
-		83B0C4201BE86C7A00D820C6 /* RoundLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B0C41F1BE86C7A00D820C6 /* RoundLabel.swift */; settings = {ASSET_TAGS = (); }; };
+		839EF6AB1BE277B200F9D7CD /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839EF6A91BE277B200F9D7CD /* SettingViewController.swift */; };
+		839EF6AC1BE277B200F9D7CD /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 839EF6AA1BE277B200F9D7CD /* SettingViewController.xib */; };
+		839EF6AF1BE2785A00F9D7CD /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839EF6AD1BE2785A00F9D7CD /* UserTableViewCell.swift */; };
+		839EF6B01BE2785A00F9D7CD /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 839EF6AE1BE2785A00F9D7CD /* UserTableViewCell.xib */; };
+		839EF6B51BE27F6E00F9D7CD /* SelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839EF6B31BE27F6E00F9D7CD /* SelectViewController.swift */; };
+		839EF6B61BE27F6E00F9D7CD /* SelectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 839EF6B41BE27F6E00F9D7CD /* SelectViewController.xib */; };
+		839EF6BA1BE2860000F9D7CD /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839EF6B81BE2860000F9D7CD /* ResultViewController.swift */; };
+		839EF6BB1BE2860000F9D7CD /* ResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 839EF6B91BE2860000F9D7CD /* ResultViewController.xib */; };
+		83B0C41C1BE8601C00D820C6 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B0C41B1BE8601C00D820C6 /* Event.swift */; };
+		83B0C41E1BE8607700D820C6 /* EventManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B0C41D1BE8607700D820C6 /* EventManager.swift */; };
+		83B0C4201BE86C7A00D820C6 /* RoundLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B0C41F1BE86C7A00D820C6 /* RoundLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,7 +45,7 @@
 		836C9DD41BE38761001EAAA9 /* AddUserTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddUserTableViewCell.xib; sourceTree = "<group>"; };
 		838892FB1BE59482005EB02A /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		838892FE1BE59560005EB02A /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
-		839EF6941BE2775300F9D7CD /* MatchDiagnosis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MatchDiagnosis.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		839EF6941BE2775300F9D7CD /* FeelingMatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FeelingMatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		839EF6971BE2775300F9D7CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		839EF69E1BE2775300F9D7CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		839EF6A31BE2775300F9D7CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -134,7 +134,7 @@
 		839EF6951BE2775300F9D7CD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				839EF6941BE2775300F9D7CD /* MatchDiagnosis.app */,
+				839EF6941BE2775300F9D7CD /* FeelingMatch.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -218,7 +218,7 @@
 			);
 			name = MatchDiagnosis;
 			productName = MatchDiagnosis;
-			productReference = 839EF6941BE2775300F9D7CD /* MatchDiagnosis.app */;
+			productReference = 839EF6941BE2775300F9D7CD /* FeelingMatch.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -407,7 +407,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -438,7 +439,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.co.tatsuya.MatchDiagnosis;
-				PRODUCT_NAME = "フィーリングマッチ";
+				PRODUCT_NAME = FeelingMatch;
 			};
 			name = Debug;
 		};
@@ -448,12 +449,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				INFOPLIST_FILE = MatchDiagnosis/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.co.tatsuya.MatchDiagnosis;
-				PRODUCT_NAME = "フィーリングマッチ";
+				PRODUCT_NAME = FeelingMatch;
 			};
 			name = Release;
 		};

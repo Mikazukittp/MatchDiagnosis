@@ -4,11 +4,6 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>LTMorphingLabel.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,17 +27,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>24D2626470D51C209EF4731567E130FF</key>
+		<key>7D5E37CCC264F7B6B4344EA6D6DBE111</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2C8341A3C15B945CF2C8FC8723E817D5</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>39492B29765CD5A335B96E6D14A3EFB1</key>
+		<key>85F7E2E5231F6401148B1513AA0DD201</key>
 		<dict>
 			<key>primary</key>
 			<true/>
