@@ -35,8 +35,13 @@ class SettingViewController: UIViewController,UITableViewDelegate,UITableViewDat
         self.navigationItem.titleView = titleImage
         
         setHeaderButton()
-        
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        sendPV()
+    }
+
     override func viewWillAppear(animated: Bool) {
         userNames = manager.allFriends()
         
@@ -136,6 +141,13 @@ class SettingViewController: UIViewController,UITableViewDelegate,UITableViewDat
         backButton.addTarget(self, action: Selector("startButtonTapped"), forControlEvents: .TouchUpInside)
         let bckButtonItem :UIBarButtonItem = UIBarButtonItem(customView: backButton)
         self.navigationItem.rightBarButtonItem = bckButtonItem
+    }
+    
+    private func sendPV() {
+        let tracker = GAI.sharedInstance().defaultTracker
+        tracker.set(kGAIScreenName, value: "ユーザ登録画面")
+        let builder = GAIDictionaryBuilder.createScreenView()
+        tracker.send(builder.build() as [NSObject : AnyObject])
     }
     
     func startButtonTapped () {

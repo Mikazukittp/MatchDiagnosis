@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1786B79F41F725F254CE006A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEED16E84DEFADEAB056BC9B /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		1786B79F41F725F254CE006A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEED16E84DEFADEAB056BC9B /* Pods.framework */; };
 		830862C31BE8802500EF15F3 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830862C11BE8802500EF15F3 /* TopViewController.swift */; };
 		830862C41BE8802500EF15F3 /* TopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 830862C21BE8802500EF15F3 /* TopViewController.xib */; };
 		830862C61BE886C800EF15F3 /* SexLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830862C51BE886C800EF15F3 /* SexLabel.swift */; };
@@ -31,6 +31,7 @@
 		83B0C41C1BE8601C00D820C6 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B0C41B1BE8601C00D820C6 /* Event.swift */; };
 		83B0C41E1BE8607700D820C6 /* EventManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B0C41D1BE8607700D820C6 /* EventManager.swift */; };
 		83B0C4201BE86C7A00D820C6 /* RoundLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B0C41F1BE86C7A00D820C6 /* RoundLabel.swift */; };
+		E6F954661C99B8B000BC29E4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E6F954651C99B8B000BC29E4 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,8 @@
 		83B0C41F1BE86C7A00D820C6 /* RoundLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundLabel.swift; sourceTree = "<group>"; };
 		A4C2CA09FFF576971F343589 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		BEED16E84DEFADEAB056BC9B /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6F954651C99B8B000BC29E4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E6F954671C99BA4F00BC29E4 /* MatchDiggnosis-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MatchDiggnosis-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +127,8 @@
 		839EF68B1BE2775300F9D7CD = {
 			isa = PBXGroup;
 			children = (
+				E6F954671C99BA4F00BC29E4 /* MatchDiggnosis-Bridging-Header.h */,
+				E6F954651C99B8B000BC29E4 /* GoogleService-Info.plist */,
 				839EF6961BE2775300F9D7CD /* MatchDiagnosis */,
 				839EF6951BE2775300F9D7CD /* Products */,
 				06A05F40ED5A4CA3C7C550E6 /* Pods */,
@@ -261,6 +266,7 @@
 			files = (
 				839EF6B61BE27F6E00F9D7CD /* SelectViewController.xib in Resources */,
 				836C9DD21BE38380001EAAA9 /* NewUserViewController.xib in Resources */,
+				E6F954661C99B8B000BC29E4 /* GoogleService-Info.plist in Resources */,
 				839EF6BB1BE2860000F9D7CD /* ResultViewController.xib in Resources */,
 				839EF6B01BE2785A00F9D7CD /* UserTableViewCell.xib in Resources */,
 				836C9DD61BE38761001EAAA9 /* AddUserTableViewCell.xib in Resources */,
@@ -363,6 +369,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -386,6 +393,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "MatchDiggnosis-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -424,6 +432,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "MatchDiggnosis-Bridging-Header.h";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -440,6 +449,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.co.tatsuya.MatchDiagnosis;
 				PRODUCT_NAME = FeelingMatch;
+				PROVISIONING_PROFILE = "904d9dbe-5e1d-4d0c-8a7d-ed7b35f07024";
 			};
 			name = Debug;
 		};
@@ -455,6 +465,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.co.tatsuya.MatchDiagnosis;
 				PRODUCT_NAME = FeelingMatch;
+				PROVISIONING_PROFILE = "904d9dbe-5e1d-4d0c-8a7d-ed7b35f07024";
 			};
 			name = Release;
 		};

@@ -58,6 +58,11 @@ class SelectViewController: UIViewController,UITableViewDelegate,UITableViewData
         self.navigationItem.setHidesBackButton(true, animated: false)
     }
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        sendPV()
+    }
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         var cell = tableView.dequeueReusableCellWithIdentifier(identifier) as? UserTableViewCell
@@ -102,6 +107,8 @@ class SelectViewController: UIViewController,UITableViewDelegate,UITableViewData
                 manager.add((self.plyer?.id)!, like_id: like_id, complition: { (error) -> Void in
                     let pc = ResultViewController(nibName: "ResultViewController", bundle: nil)
                     pc.event_id = self.event_id
+                    pc.sumUsers = self.masterUserNames.count
+                    self.sendEvent("\(self.plyer!.name)は\(likePeople)が好きです")
                     self.navigationController?.pushViewController(pc, animated: true)
                 })
             } else {
@@ -120,4 +127,18 @@ class SelectViewController: UIViewController,UITableViewDelegate,UITableViewData
         }
         alertView.showNotice("確認", subTitle: message)
     }
+    
+    private func sendPV() {
+        let tracker = GAI.sharedInstance().defaultTracker
+        tracker.set(kGAIScreenName, value: "ユーザ選択画面")
+        let builder = GAIDictionaryBuilder.createScreenView()
+        tracker.send(builder.build() as [NSObject : AnyObject])
+    }
+    
+    private func sendEvent(value :String) {
+        let tracker = GAI.sharedInstance().defaultTracker
+        let builder = GAIDictionaryBuilder.createEventWithCategory("ユーザ選択画面", action: value, label: "Like", value: nil)
+        tracker.send(builder.build() as [NSObject :AnyObject])        
+    }
+
 }
