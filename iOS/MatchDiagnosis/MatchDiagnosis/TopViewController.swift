@@ -20,11 +20,11 @@ class TopViewController: UIViewController {
         //マッチングを見る方法
         //eventIdが高いものが最新
         //usersとeventのidを比較して解析する
-        let realm = try! Realm()
-        let users = realm.objects(User)
-        print(users)
-        let event = realm.objects(Event)
-        print(event)
+//        let realm = try! Realm()
+//        let users = realm.objects(User)
+//        print(users)
+//        let event = realm.objects(Event)
+//        print(event)
     }
     
     override func viewWillAppear(animated: Bool) {
